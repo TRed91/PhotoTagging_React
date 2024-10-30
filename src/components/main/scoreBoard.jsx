@@ -45,7 +45,7 @@ function ScoreBoard ({ imageId }) {
     }
 
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}/score?imageId=${imageId}`, {
+        fetch(`https://plain-kalinda-tred91-e9c68be1.koyeb.app/score?imageId=${imageId}`, {
             method: 'get',
         })
         .then(res => res.json())

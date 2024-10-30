@@ -49,7 +49,7 @@ function ImageComponent ({ imageId }) {
     }
 
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}/image/${imageId}`, {
+        fetch(`https://plain-kalinda-tred91-e9c68be1.koyeb.app/image/${imageId}`, {
             method: 'get'
         })
         .then(res => res.blob())
@@ -59,7 +59,7 @@ function ImageComponent ({ imageId }) {
         })
         .catch(err => console.log(err));
 
-        fetch(`${import.meta.env.VITE_API_URL}/image/${imageId}/data`, {
+        fetch(`https://plain-kalinda-tred91-e9c68be1.koyeb.app/image/${imageId}/data`, {
             method: 'get'
         })
         .then(res => res.json())
@@ -96,7 +96,7 @@ function ImageComponent ({ imageId }) {
 
     const handleSelect = (e) => {
         setDdHidden(true);
-        fetch(`${import.meta.env.VITE_API_URL}/image/1/position?select=${e.target.value}&xPos=${mouseX}&yPos=${mouseY}`, {
+        fetch(`https://plain-kalinda-tred91-e9c68be1.koyeb.app/image/1/position?select=${e.target.value}&xPos=${mouseX}&yPos=${mouseY}`, {
             method: 'get',
         })
         .then(res => res.json())
@@ -117,7 +117,7 @@ function ImageComponent ({ imageId }) {
     }
 
     const postTime = () => {
-        fetch(`${import.meta.env.VITE_API_URL}/timer`, {
+        fetch(`https://plain-kalinda-tred91-e9c68be1.koyeb.app/timer`, {
             method: 'put',
             headers: {
                 'Content-Type': 'application/json'

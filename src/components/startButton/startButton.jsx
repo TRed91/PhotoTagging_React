@@ -7,7 +7,7 @@ function StartButton({start, setTimerId, image}){
 
     const handleStartGame = (e) => {
         e.preventDefault();
-        fetch(`${import.meta.env.VITE_API_URL}/timer`, {
+        fetch(`https://plain-kalinda-tred91-e9c68be1.koyeb.app/timer`, {
             method: 'post'
         })
         .then(res => res.json())

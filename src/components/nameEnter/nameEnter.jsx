@@ -15,7 +15,7 @@ function NameEnter({ time, imageId }) {
         e.preventDefault();
         setDisabled(true);
         // fetch post score and name
-        fetch(`${import.meta.env.VITE_API_URL}/score`, {
+        fetch(`https://plain-kalinda-tred91-e9c68be1.koyeb.app/score`, {
             method: 'post',
             headers: {
                 'Content-Type':'application/json'
